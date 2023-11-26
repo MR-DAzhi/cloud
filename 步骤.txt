@@ -86,9 +86,3 @@ MacOS 用户直接在终端运行如下命令即可
 
 curl https://raw.githubusercontent.com/badafans/better-cloudflare-ip/master/shell/cf.sh -o cf.sh && chmod +x cf.sh && ./cf.sh
 以下是套用 CDN 之后的真实测速：测试时间 09:28 8K 视频
-
-
-
-后记
-
-新手经过上面的一些教程，就大致的了解了为什么要购买域名、VPS 是干什么的，如何简单的操控 VPS，以及代理节点的搭建等问题了。
