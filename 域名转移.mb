@@ -1,4 +1,4 @@
-![image](https://github.com/lexsaints/powershell/blob/master/IMG/ps2.png)
+![image](https://github.com/MR-DAzhi/cloud/blob/main/3493435851.png)
 1、打开原域名网站namecheap.com选择自己要转移的域名右边的Manage，再点Sharing&Transfer，拉到最下面将Transfer Out下面的Domain Lock右边的UNLOCK点一下解锁域名，再点最右边的AUTH CODE按提示确认后，该网站注册账号绑定的邮箱里会收到一封邮件，复制邮件内的转移授权代码备用；
 
 2、进入需要转移到的目标网站porkbun.com选择网站顶部的TRANSFER（转移），检查确认自己的域名符合转移条件后，在最下方输入自己的域名和转移授权代码，再点提交然后按对应金额付款即可，我这个后缀的域名转移费用是13.88美元含一年续费价格了，porkbun.com网站上是这样介绍的：所有通用顶级域名 (gTLD) 域名的转让都包括一年的域名续订，除非域名处于自动续订宽限期内。
