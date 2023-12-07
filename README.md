@@ -92,3 +92,20 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 
  ----------------
 这种 Xray 可视化管理面板 的方式，也是支持伪装网站以及多网站并存的，包括支持宝塔面板的搭建方式。
+
+
+测试VPS服务器的性能、路由、下载速度脚本：
+1、显示vps的系统信息、网络信息、硬盘的读写速度、测试不同位置的下载和上传速度、
+
+    curl -sL yabs.sh | bash   
+   
+curl -sL yabs.sh | bash
+   低宽带服务器应该考虑加入-r减少位置测试，或者-i禁用网络测试 
+   curl -sL yabs.sh | bash -s -- -r
+   curl -sL yabs.sh | bash -s -- -i
+
+2、三网回程路由和延迟测试
+   wget -qO- git.io/besttrace | bash
+
+3、三网测速，使用全国各地三大运营商的speedtest测速节点进行测速
+   bash <(curl -Lso- https://git.io/superspeed.sh)
