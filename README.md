@@ -99,13 +99,23 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 
     curl -sL yabs.sh | bash   
    
-curl -sL yabs.sh | bash
    低宽带服务器应该考虑加入-r减少位置测试，或者-i禁用网络测试 
-   curl -sL yabs.sh | bash -s -- -r
-   curl -sL yabs.sh | bash -s -- -i
 
+    curl -sL yabs.sh | bash -s -- -r
+    
+
+    curl -sL yabs.sh | bash -s -- i
+
+   
 2、三网回程路由和延迟测试
-   wget -qO- git.io/besttrace | bash
+
+    wget -qO- git.io/besttrace | bash
+   
 
 3、三网测速，使用全国各地三大运营商的speedtest测速节点进行测速
-   bash <(curl -Lso- https://git.io/superspeed.sh)
+
+    curl -Lso- https://git.io/superspeed.sh
+    
+
+
+
