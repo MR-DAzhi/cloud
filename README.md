@@ -95,6 +95,8 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 
 
 测试VPS服务器的性能、路由、下载速度脚本：
+
+
 1、显示vps的系统信息、网络信息、硬盘的读写速度、测试不同位置的下载和上传速度、
 
     curl -sL yabs.sh | bash   
