@@ -3,7 +3,7 @@
 
 ```
    rm -rf /etc/localt
-   ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtim
+   ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
 # NTP同步时间 协议
 ## 众所周知，NTP协议是网络时间同步协议，有了它，我们可以很轻松的同步本地时间与互联网时间。VPS上也可以使用NTP来同步网络。首先安装必要的软件包：
