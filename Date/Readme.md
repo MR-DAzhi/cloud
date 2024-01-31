@@ -2,8 +2,8 @@
 ### 一般国外的VPS的镜像都是默认的国外时区，使用起来不是很方便。可以把它修改成北京时间，就会方便很多。代码
 
 ```
-   rm -rf /etc/localt
-   ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+  rm -rf /etc/localtime
+  ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
 ### NTP同步时间 协议
 ### 众所周知，NTP协议是网络时间同步协议，有了它，我们可以很轻松的同步本地时间与互联网时间。VPS上也可以使用NTP来同步网络。首先安装必要的软件包：
