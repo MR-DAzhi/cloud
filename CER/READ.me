@@ -1,0 +1,10 @@
+export CF_Key="2095b201c3b6e2892fb787596863a1f5a1632"
+
+export CF_Email="dazhixiansheng777@gmail.com"
+
+
+~/.acme.sh/acme.sh --issue --dns dns_cf -d 4240333.xyz -d *.4240333.xyz
+mkdir /root/cert
+~/.acme.sh/acme.sh --installcert -d 4240333.xyz --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crt
+~/.acme.sh/acme.sh --upgrade --auto-upgrade
+chmod -R 755 /root/cert
