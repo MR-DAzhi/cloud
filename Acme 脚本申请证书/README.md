@@ -25,9 +25,13 @@ curl https://get.acme.sh | sh
 export CF_Key="2095b201c3b6e2"
 export CF_Email="dazhixiansheng777@gmail.com"
 ```
-## 验证 DNS 并申请证书
+## 若是DNS验证申请不下来，请尝试使用下面的 Web 验证的方式申请证
 ```
-~/.acme.sh/acme.sh --issue --dns dns_cf -d 4240333.xyz -d *.4240333.xyz
+1.    ~/.acme.sh/acme.sh --issue --dns dns_cf -d bozai3.xyz -d *.bozai3.xyz
+2.    mkdir /root/cert
+3.    ~/.acme.sh/acme.sh --installcert -d bozai3.xyz --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crt
+4.    ~/.acme.sh/acme.sh --upgrade --auto-upgrade
+5.    chmod -R 755 /root/cert
 
 ```
 
@@ -37,10 +41,6 @@ export CF_Email="dazhixiansheng777@gmail.com"
 ~/.acme.sh/acme.sh --installcert -d 4240333.xyz --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crt
 ```
 将/root/private.key和 /root/cert.crt 是把密钥和证书安装到 /root 目录，并改名为 private.key 和 cert.crt
-## 将 /root/cert 目录以及其下所有的文件和子目录的权限设置为拥有者具有读、写、执行权限，相同组的用户具有读、执行权限，其他用户也具有读、执行权限。
-```
-chmod -R 755 /root/cert
-```
 
 ## 更新 Acme 脚本
 ```
