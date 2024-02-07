@@ -15,6 +15,11 @@ apt install -y socat    #Debian/Ubuntu 命令
 curl https://get.acme.sh | sh
 ```
 
+安装 Acme 脚本之后，请先执行下面的命令（下面的邮箱为你的邮箱）
+```
+
+~/.acme.sh/acme.sh --register-account -m xxxx@xxxx.com
+```
 ## 设置 Cloudflare API 令牌
 ```
 export CF_Key="2095b201c3b6e2"
