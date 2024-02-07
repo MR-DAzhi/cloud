@@ -37,12 +37,14 @@ export CF_Email="dazhixiansheng777@gmail.com"
 ~/.acme.sh/acme.sh --installcert -d 4240333.xyz --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crt
 ```
 将/root/private.key和 /root/cert.crt 是把密钥和证书安装到 /root 目录，并改名为 private.key 和 cert.crt
+## 将 /root/cert 目录以及其下所有的文件和子目录的权限设置为拥有者具有读、写、执行权限，相同组的用户具有读、执行权限，其他用户也具有读、执行权限。
+```
+chmod -R 755 /root/cert
+```
+
 ## 更新 Acme 脚本
 ```
 ~/.acme.sh/acme.sh --upgrade
 
 ```
-## 将 /root/cert 目录以及其下所有的文件和子目录的权限设置为拥有者具有读、写、执行权限，相同组的用户具有读、执行权限，其他用户也具有读、执行权限。
-```
-chmod -R 755 /root/cert
-```
+
