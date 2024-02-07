@@ -28,7 +28,7 @@ export CF_Email="dazhixiansheng777@gmail.com"
 ## 验证 DNS 并申请证书
 ```
 ~/.acme.sh/acme.sh --issue --dns dns_cf -d 4240333.xyz -d *.4240333.xyz
-mkdir /root/cert
+
 ```
 
 ## 安装证书到指定文件夹
