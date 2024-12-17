@@ -68,8 +68,22 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 放行54321端口:
 
     iptables -I INPUT -p tcp --dport 54321 -j ACCEPT
-  
-  
+
+## CDN放行端口 IPV4
+
+```# 放行 HTTP 和 HTTPS 端口
+iptables -A INPUT -p tcp -m multiport --dports 80,443,2052,2053,2082,2083,2086,2087,2095,2096,8443 -j ACCEPT
+```
+
+
+## CDN放行端口ipv6
+
+
+```# 放行 HTTP 和 HTTPS 端口
+ip6tables -A INPUT -p tcp -m multiport --dports 80,443,2052,2053,2082,2083,2086,2087,2095,2096,8443 -j ACCEPT
+```
+
+
 ## 申请 SSL 的证书
 
 输入命令 <code> x-ui</code>  ，进入 X-ui 的命令菜单
