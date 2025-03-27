@@ -55,10 +55,12 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
  
     wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
  
- ## 一键安装面板
-   bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+ ## 一键安3X-ui面板
+```
+bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+``` 
  
- 完成 X-ui 安装以后，我们可以输入 VPS IP:端口（如1.1.1.1:12345） 登录 X-ui 的管理面板（可以登录代表安装成功，登录不了请放行端口。)
+完成3X-ui 安装以后，我们可以输入 VPS IP:端口（如1.1.1.1:12345） 登录3X-ui 的管理面板（可以登录代表安装成功，登录不了请放行端口。)
 
 ##  放行端口指令
 放行443端口:
