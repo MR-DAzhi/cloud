@@ -55,12 +55,12 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
  
     wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
  
- ## 一键安3X-ui面板
+ ## 一键X-ui面板
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
 ``` 
  
-完成3X-ui 安装以后，我们可以输入 VPS IP:端口（如1.1.1.1:12345） 登录3X-ui 的管理面板（可以登录代表安装成功，登录不了请放行端口。)
+完X-ui 安装以后，我们可以输入 VPS IP:端口（如1.1.1.1:12345） 登录3X-ui 的管理面板（可以登录代表安装成功，登录不了请放行端口。)
 
 ##  放行端口指令
 放行443端口:
@@ -95,6 +95,13 @@ ip6tables -A INPUT -p tcp -m multiport --dports 80,443,2052,2053,2082,2083,2086,
 
 申请成功以后，证书和密钥文件在 VPS 目录的<code> /root/cert </code>文件夹里面
 
+
+## 安装证书到指定文件夹
+
+```
+~/.acme.sh/acme.sh --installcert -d baidu.xyz --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crt
+```
+将/root/private.key和 /root/cert.crt 是把密钥和证书安装到 /root 目录，并改名为 private.key 和 cert.crt
 ##  x-ui 管理面板设置
 添加证书和密钥路径，重启面板
 通过域名访问x-ui 管理面板：https://域名:54321
