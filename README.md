@@ -78,7 +78,7 @@ warp [option] [lisence]
 bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
 ``` 
  
-完X-ui 安装以后，我们可以输入 VPS IP:端口（如1.1.1.1:12345） 登录3X-ui 的管理面板（可以登录代表安装成功，登录不了请放行端口。)
+完X-ui 安装以后，我们可以输入 VPS IP:端口（如1.1.1.1:54321） 登录3X-ui 的管理面板（可以登录代表安装成功，登录不了请放行端口。)
 
 ###  放行端口指令
 放行443端口:
