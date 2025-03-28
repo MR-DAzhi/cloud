@@ -21,7 +21,7 @@ Cloudflare 接管域名教程：https://youtu.be/1GtDTWybJNM
 
 X-ui 搭建教程一：https://youtu.be/n5koU-pj094
 
-## 准备工作
+### 准备工作
 
 - 1、域名一个，托管到 Cloudflare （方法见上）
 
@@ -37,7 +37,7 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 
  
 
-## 更新安装系统
+### 更新安装系统
 下面环境的安装方式，大家根据自己的系统选择命令安装就好了。
 ### 1、Debian/Ubuntu 系统执行以下命令：
     apt update -y         
@@ -49,20 +49,38 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
     yum update -y         
     yum install -y curl   
     yum install -y socat   
+    
+### 如果机器出口没有IPv4，可通过安装WARP来给机器添加IPv4出口
+WARP好处
+支持 chatGPT，解锁奈飞流媒体
+避免 Google 验证码或是使用 Google 学术搜索
+可调用 IPv4 接口，使青龙和V2P等项目能正常运行
+由于可以双向转输数据，能做对方VPS的跳板和探针，替代 HE tunnelbroker
+能让 IPv6 only VPS 上做的节点支持 Telegram
+IPv6 建的节点能在只支持 IPv4 的 PassWall、ShadowSocksR Plus+ 上使用
 
- ## 安装 BBR 加速
+### warp 运行脚本
+```
+wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh [option] [lisence/url/token]
+```
+### 再次运行
+```
+warp [option] [lisence]
+```
+教程 https://github.com/fscarmen/warp-sh
+### 安装 BBR 加速
  本脚本建议在Debian≥9或是CentOS≥8以上的系统中使用
  
     wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
  
- ## 一键X-ui面板
+### 一键X-ui面板
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
 ``` 
  
 完X-ui 安装以后，我们可以输入 VPS IP:端口（如1.1.1.1:12345） 登录3X-ui 的管理面板（可以登录代表安装成功，登录不了请放行端口。)
 
-##  放行端口指令
+###  放行端口指令
 放行443端口:
 
     iptables -I INPUT -p tcp --dport 443 -j ACCEPT
@@ -71,14 +89,14 @@ bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/insta
 
     iptables -I INPUT -p tcp --dport 54321 -j ACCEPT
 
-## CDN放行端口 IPV4
+### CDN放行端口 IPV4
 
 ```# 放行 HTTP 和 HTTPS 端口
 iptables -A INPUT -p tcp -m multiport --dports 80,443,2052,2053,2082,2083,2086,2087,2095,2096,8443 -j ACCEPT
 ```
 
 
-## CDN放行端口ipv6
+### CDN放行端口ipv6
 
 
 ```# 放行 HTTP 和 HTTPS 端口
@@ -86,7 +104,7 @@ ip6tables -A INPUT -p tcp -m multiport --dports 80,443,2052,2053,2082,2083,2086,
 ```
 
 
-## 申请 SSL 的证书
+### 申请 SSL 的证书
 
 输入命令 <code> x-ui</code>  ，进入 X-ui 的命令菜单
 选择 16，申请 SSL 的证书。（申请需要有 Cloudflare API ，可以 观看视频 获取 API）
@@ -96,20 +114,20 @@ ip6tables -A INPUT -p tcp -m multiport --dports 80,443,2052,2053,2082,2083,2086,
 申请成功以后，证书和密钥文件在 VPS 目录的<code> /root/cert </code>文件夹里面
 
 
-## 安装证书到指定文件夹
+### 安装证书到指定文件夹
 
 ```
 ~/.acme.sh/acme.sh --installcert -d baidu.xyz --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crt
 ```
 将/root/private.key和 /root/cert.crt 是把密钥和证书安装到 /root 目录，并改名为 private.key 和 cert.crt
-##  x-ui 管理面板设置
+###  x-ui 管理面板设置
 添加证书和密钥路径，重启面板
 通过域名访问x-ui 管理面板：https://域名:54321
  
- ## 添加科学上网节点
+### 添加科学上网节点
  这一步扩展性很强，大家可以根据自己的需求设置相关的节点规则。
 
-## 关于x-ui节点电脑V2ray能连接上，扫描导入手机V2rayNG连接不了？
+### 关于x-ui节点电脑V2ray能连接上，扫描导入手机V2rayNG连接不了？
 在 X-ui面板设置中，“面板证书公钥文件路径”，不要用带自己域名的证书，输入<code> /root/cert/fullchain.cer</code> （这是标准的CA证书集的文件之一）的路径。然后重启面板。在创建的节点时候，公钥文件路径同样填入 <code> /root/cert/fullchain.cer</code> 。
 这样设置之后，解决了问题： io read/write on closed pipe
 
