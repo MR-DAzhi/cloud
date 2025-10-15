@@ -1,15 +1,15 @@
 
 import { connect } from 'cloudflare:sockets';
 
-let userID = '';
-let proxyIP = '';
+let userID = '697145d9-4f8d-4d40-b085-49c1c3fe9920';
+let proxyIP = 'ProxyIP.Oracle.cmliussss.net';
 let DNS64Server = '';
-//let sub = '';
+//let sub = 'wtrorg.sosorg.nyc.mn';
 let subConverter = atob('U3ViQXBpLkNtbGlVc3NzUy5OZXQ=');
 let subConfig = atob('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvY29uZmlnL0FDTDRTU1JfT25saW5lX01pbmlfTXVsdGlNb2RlLmluaQ==');
 let subProtocol = 'https';
 let subEmoji = 'true';
-let socks5Address = '';
+let socks5Address = 'user:password@127.0.0.1:1080';
 let parsedSocks5Address = {};
 let enableSocks = false;
 let enableHttp = false;
@@ -34,7 +34,7 @@ let FileName = atob('ZWRnZXR1bm5lbA==');
 let BotToken;
 let ChatID;
 let proxyhosts = [];
-let proxyhostsURL = atob('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NtbGl1L2NtbGl1L21haW4vUHJveHlIT1NU');
+let proxyhostsURL;
 let 请求CF反代IP = 'false';
 const httpPorts = ["8080", "8880", "2052", "2082", "2086", "2095"];
 let httpsPorts = ["2053", "2083", "2087", "2096", "8443"];
