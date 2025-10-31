@@ -1,0 +1,10 @@
+IP地址,端口,TLS,数据中心,源IP位置,地区,城市,地区(中文),国家,城市(中文),国旗,网络延迟
+27.254.163.51,10327,true,BKK,TH,Asia Pacific,Bangkok,亚洲,泰国,曼谷,🇹🇭,178 ms
+171.103.223.30,10239,true,BKK,TH,Asia Pacific,Bangkok,亚洲,泰国,曼谷,🇹🇭,306 ms
+171.103.222.142,18110,true,BKK,TH,Asia Pacific,Bangkok,亚洲,泰国,曼谷,🇹🇭,309 ms
+171.103.231.6,33399,true,BKK,TH,Asia Pacific,Bangkok,亚洲,泰国,曼谷,🇹🇭,391 ms
+171.103.231.6,18082,true,BKK,TH,Asia Pacific,Bangkok,亚洲,泰国,曼谷,🇹🇭,391 ms
+171.103.14.207,10071,true,BKK,TH,Asia Pacific,Bangkok,亚洲,泰国,曼谷,🇹🇭,422 ms
+171.103.14.55,10111,true,BKK,TH,Asia Pacific,Bangkok,亚洲,泰国,曼谷,🇹🇭,436 ms
+171.103.14.247,10034,true,BKK,TH,Asia Pacific,Bangkok,亚洲,泰国,曼谷,🇹🇭,449 ms
+171.103.164.62,30921,true,NRT,TH,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,481 ms
