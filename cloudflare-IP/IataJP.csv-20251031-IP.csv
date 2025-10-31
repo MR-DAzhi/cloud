@@ -7,3 +7,5 @@ IP地址,端口,TLS,数据中心,源IP位置,地区,城市,地区(中文),国家
 168.138.46.115,43138,true,KIX,JP,Asia Pacific,Osaka,亚洲,日本,大阪,🇯🇵,198 ms
 152.69.202.173,59407,true,KIX,JP,Asia Pacific,Osaka,亚洲,日本,大阪,🇯🇵,202 ms
 172.233.82.44,444,true,KIX,JP,Asia Pacific,Osaka,亚洲,日本,大阪,🇯🇵,230 ms
+117.123.237.115,12266,true,KIX,KR,Asia Pacific,Osaka,亚洲,日本,大阪,🇯🇵,144 ms
+118.91.83.231,10108,true,NRT,KR,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,145 ms
