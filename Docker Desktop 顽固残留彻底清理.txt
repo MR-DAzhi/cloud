@@ -1,0 +1,38 @@
+🛠️ Docker Desktop 顽固残留彻底清理指南
+（针对“Security reasons: must be owned by an elevated account”报错的绝杀方案）
+
+第一阶段：物理层面的“暴力拆迁”
+火绒粉碎：使用火绒或其他强力删除工具，直接粉碎 C:\ProgramData\Docker 和 C:\ProgramData\DockerDesktop 文件夹。
+
+手动验证：尝试在 C:\ProgramData 下手动新建一个名为 DockerDesktop 的文件夹。如果能成功创建且不报错，物理阻碍已扫除。
+
+第二阶段：注册表层面的“身份注销”
+下载微软官方利器：
+搜索并下载 "Microsoft Program Install and Uninstall troubleshooter"（文件名通常为 MicrosoftProgram_Install_and_Uninstall.meta.diagcab）。
+
+执行强力卸载：
+
+运行工具，选择 “卸载” (Uninstalling)。
+
+在列表中找 Docker Desktop。若没有，选 “未列出”，输入 Product Code：{A9B6B676-4740-4A9B-B7F2-9A4E9E6C383F}。
+
+让工具显示 “已修复”。
+
+第三阶段：命令行层面的“斩草除根”
+以 管理员身份 打开 CMD，依次执行以下三行代码，彻底抹除系统服务和残留项：
+
+DOS
+:: 强行删除注册表中的卸载信息和公司索引
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Docker Desktop" /f
+reg delete "HKLM\SOFTWARE\Docker Inc." /f
+
+:: 彻底注销底层 WSL 虚拟环境（防止重装时环境冲突）
+wsl --unregister docker-desktop
+wsl --unregister docker-desktop-data
+第四阶段：系统层面的“重启归零”
+重启电脑。这一步是为了刷新 Windows 的安全标识符 (SID) 缓存，让系统彻底忘记那个报错的所有权记录。
+
+第五阶段：重新点火安装
+确保 C:\ProgramData\DockerDesktop 这个文件夹不存在（或已被你刚才删掉）。
+
+右键 Docker Desktop Installer.exe，选择 “以管理员身份运行”。
