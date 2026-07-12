@@ -75,7 +75,7 @@ warp [option] [lisence]
  
 ### 一键X-ui面板
 ```
-wget -qO- https://raw.githubusercontent.com/yonggekkk/x-ui-yg/main/install.sh
+bash <(wget -qO- https://raw.githubusercontent.com/yonggekkk/x-ui-yg/main/install.sh)
 ``` 
  
 完X-ui 安装以后，我们可以输入 VPS IP:端口（如1.1.1.1:54321） 登录3X-ui 的管理面板（可以登录代表安装成功，登录不了请放行端口。)
